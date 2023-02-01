@@ -32,7 +32,7 @@ const t3 = Timecode.MillisecondsToHHMMss(3000); // t3 = "00:00:03";
 const t4 = Timecode.MillisecondsToHHMMss(3009); // t3 = "00:00:03.09";
 
 // To convert a standard time code, HHMMss, and HHMMssSSS to milliseconds.
-const ms1 = Timecode.HHMMssSSStoMilliseconds("00:00:03.09"); // ms1 = 3009;
+const ms1 = Timecode.TimetoMilliseconds("00:00:03.09"); // ms1 = 3009;
 ```
 
 ## Tests

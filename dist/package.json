@@ -1,6 +1,6 @@
 {
   "name": "typescript-timecode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A typescript timecode converter",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",
