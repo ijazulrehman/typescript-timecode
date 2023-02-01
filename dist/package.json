@@ -1,28 +1,28 @@
 {
   "name": "typescript-timecode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A typescript timecode converter",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",
   "homepage": "https://github.com/ijazulrehman/typescript-timecode",
-	"keywords": [
-		"timecode",
-		"utils",
-		"time",
-		"converter",
-		"utility"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ijazulrehman/typescript-timecode.git"
-	},
-	"bugs": {
-		"url": "https://github.com/ijazulrehman/typescript-timecode/issues"
-	},
-	"author": {
-		"name": "Ijaz Ul Rehman",
-		"url": "http://ijazulrehman.com",
+  "keywords": [
+    "timecode",
+    "utils",
+    "time",
+    "converter",
+    "utility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijazulrehman/typescript-timecode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ijazulrehman/typescript-timecode/issues"
+  },
+  "author": {
+    "name": "Ijaz Ul Rehman",
+    "url": "http://ijazulrehman.com",
     "email": "ijazulrehman@outlook.com"
-	},
-	"license": "MIT"
+  },
+  "license": "MIT"
 }
