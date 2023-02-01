@@ -9,7 +9,11 @@ export default class Timecode {
    * const time = Timecode.MillisecondsToTime(32000000)
    * ```
    */
-  static MillisecondsToTime(millisecs: number): string {
+  static MillisecondsToTime(millisecs: number, msSeparator?: string): string {
+    const msString = String(millisecs % 1000)
+      .padStart(3, "0")
+      .replace(/0+$/, "");
+
     const seconds = Math.floor((millisecs / 1000) % 60);
     const minutes = Math.floor((millisecs / 60000) % 60);
     const hours = Math.floor(millisecs / 3600000);
@@ -18,7 +22,9 @@ export default class Timecode {
     const minutesT = `${minutes}`.padStart(2, "0");
     const hoursT = `${hours}`.padStart(2, "0");
 
-    return `${hours ? `${hoursT}:` : ""}${minutesT}:${secondsT}`;
+    return `${hours ? `${hoursT}:` : ""}${minutesT}:${secondsT}${
+      msSeparator && msSeparator ? msSeparator + msString : ""
+    }`;
   }
 
   /**
@@ -32,10 +38,15 @@ export default class Timecode {
    * ```
    *
    */
-  static MillisecondsToHHMMssSSS = (millisecs: number): string => {
-    const msString = ((millisecs % 1000) + "00").slice(0, 2);
+  static MillisecondsToHHMMssSSS = (
+    millisecs: number,
+    msSeparator: string = "."
+  ): string => {
+    const msString = String(millisecs % 1000)
+      .padStart(3, "0")
+      .replace(/0+$/, "");
 
-    return `${this.MillisecondsToHHMMss(millisecs)}.${msString}`;
+    return this.MillisecondsToHHMMss(millisecs) + msSeparator + msString;
   };
 
   /**

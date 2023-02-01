@@ -28,14 +28,21 @@ yarn add typescript-timecode
 import Timecode from "typescript-timecode";
 
 // To convert millisecond to standard time code
-const t1 = Timecode.MillisecondsToTime(32000000); // t1 = "05:20";
-const t2 = Timecode.MillisecondsToTime(32000009); // t2 = "05:20";
+const t1 = Timecode.MillisecondsToTime(320009); // t1 = "05:20";
+//if need ms then pass separator
+const t2 = Timecode.MillisecondsToTime(320009, "."); // t2 = "05:20.009";
 
 // To convert millisecond to HH:MM:ss time code
-const t3 = Timecode.MillisecondsToHHMMss(3000); // t3 = "00:00:03";
+const t3 = Timecode.MillisecondsToHHMMss(320009); // t3 = "00:05:20";
 
 // To convert millisecond to HH:MM:ss.SSS time code
-const t4 = Timecode.MillisecondsToHHMMss(3009); // t3 = "00:00:03.09";
+const t4 = Timecode.MillisecondsToHHMMssSSS(320009); // t4 = "00:05:20.009";
+
+// To convert millisecond to HH:MM:ss.SSS time code
+const t5 = Timecode.MillisecondsToHHMMssSSS(320009, ","); // t5 = "00:05:20,009";
+
+// To convert millisecond to HH:MM:ss.SSS time code
+const t6 = Timecode.MillisecondsToHHMMssSSS(320009, ":"); // t6 = "00:05:20:009";
 
 // To convert a standard time code, HHMMss, and HHMMssSSS to milliseconds.
 const ms1 = Timecode.TimetoMilliseconds("00:00:03.09"); // ms1 = 3009;
