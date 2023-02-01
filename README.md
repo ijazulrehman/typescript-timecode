@@ -4,6 +4,11 @@
 
 A typscript tool to convert timecodes
 
+<div>
+   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ijazulrehman/typescript-timecode">
+   <img alt="GitHub" src="https://img.shields.io/github/license/ijazulrehman/typescript-timecode">
+</div>
+
 ## Installation
 
 For npm users:
